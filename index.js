@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Define the '/booking/api' route
-app.all('/booking/api', (req, res) => {
+app.all('/api/booking', (req, res) => {
   console.log("Just got a request!");
 
   // JSON data to be sent as a response
