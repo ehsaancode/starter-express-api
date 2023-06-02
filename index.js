@@ -11,6 +11,26 @@ app.all('/api/booking', (req, res) => {
     name: 'John Doe',
     date: '2023-06-02'
   };
+  
+  // Define the '/booking/api' route
+app.post('/api/booking', (req, res) => {
+  console.log("Just got a POST request!");
+
+  // Retrieve the data from the request body
+  const { movie, slot, seats } = req.body;
+
+  // Store the data or perform any required operations
+  // For example, you can save the data in a database
+  // Here, we simply log the received data
+  console.log("Movie:", movie);
+  console.log("Slot:", slot);
+  console.log("Seats:", seats);
+
+  // JSON data to be sent as a response
+  const jsonData = {
+    bookingId: 1,
+    message: 'Booking successful'
+  };
 
   // Send the JSON data as a response
   res.json(jsonData);
