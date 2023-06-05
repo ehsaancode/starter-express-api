@@ -13,11 +13,7 @@ app.all('/api/booking', (req, res) => {
   };
   
   // Define the '/booking/api' route
-app.post('/api/booking', (req, res) => {
-  console.log("Just got a POST request!");
 
-  // Retrieve the data from the request body
-  const { movie, slot, seats } = req.body;
 
   // Store the data or perform any required operations
   // For example, you can save the data in a database
